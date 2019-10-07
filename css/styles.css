@@ -16,7 +16,11 @@ main {
 
 
 header{
-    display: grid;
+    grid-area: head;
+}
+
+.heading{
+    display:grid;
     grid-template-areas: 
         "name himg"
         "name himg";
@@ -26,6 +30,7 @@ header{
     align-items: center;
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 30%, rgba(246,247,212,1) 100%); 
+
 }
 
 .navbar{
@@ -55,7 +60,7 @@ body{
     text-align: center;
 }
 .name{
-    font-size: 300%;
+    font-size: 450%;
     color: #db4f5c;
     padding-bottom: 3%;
 
@@ -119,10 +124,10 @@ body{
     grid-area: blog3
 }
 #bio{
-    display: grid;
     grid-area: bio;
+    display: grid;
     grid-template-areas:
-        "head1 head2 img1"
+        "bio1 comp   img1"
         "bio1 comp img1"
         "bio1 comp img1";
     grid-template-columns: 2fr 1fr 1fr;
@@ -135,16 +140,19 @@ body{
 .bio-heading{
     font-size:  240%;
     align-self: center;
+    text-align: center;
     padding-top: 1%;
 }
 .bio-img{
-    grid-area: img1
+    grid-area: img1;
+    height: 100%;
 }
 .bio-list{
     justify-self: center;
     text-align: center;
-    grid-row-end: img1-end;
-    margin-top: -20%;
+    grid-area: bio1;    
+    width: 90%;
+    text-align: left;
 }
 .histlist{
     height: 50px;
@@ -165,7 +173,8 @@ body{
 
 .comp-listing{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
 }
 footer{
     background-color:  #2e6c9b;
