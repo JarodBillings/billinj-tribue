@@ -32,15 +32,9 @@ header{
 }
 
 .navbar{
-    /**
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 30%, rgba(246,247,212,1) 100%); 
-    **/
     display:flex;
     flex-direction:row;
     justify-content: space-evenly; 
-    /**background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 30%, rgba(246,247,212,1) 100%); 
-    **/
     background: #0F2027;  /* fallback for old browsers */
     padding: 1%;
 }
@@ -52,37 +46,48 @@ header{
     text-decoration: none;
 }
 
+/**
+    Change the color to indicate a hover
+**/
 .navtext *:hover{
     color: #ff595e
 }
 
 
+/**
+    "Fake" verticle bar. This attempts to mimic the HR rule.
+**/
 .vbar{
     width: 2px;
     margin: 6px 0;
     background: #db4f5c
 }
+
 body{
     font-family: 'Raleway', sans-serif;
 }
+
 .headtext{
     font-size: 150%;
     text-align: center;
     font-weight: bolder;
 }
+
 .header-title{
     text-align: center;
 }
+
 .val{
     font-family: 'Raleway', sans-serif;
     text-align: center;
 }
+
 .name{
     font-size: 450%;
     color: #db4f5c;
     padding-bottom: 3%;
-
 }
+
 .quote{
     color: #1c1c1c;
     padding-top:3%;
@@ -93,10 +98,17 @@ body{
     margin: auto;
 }
 
+/**
+    Mid section logos
+**/
 .logo{
     width: 128px;
     height: 128px;
 }
+
+/**
+Gradient for the middle section
+*/
 .rowgrad{
     background: rgb(227,247,255);
     background: linear-gradient(90deg, rgba(227,247,255,1) 0%, rgba(254,233,195,1) 50%, rgba(255,210,210,1) 100%); 
@@ -105,19 +117,30 @@ body{
     grid-column-start: one;
     grid-column-end: three;
     grid-row-start: one;
+    /**
+        Make it so that it is below the pictures.
+    **/
     z-index: -1;
 }
+
 .company{
     position:relative;
 }
+
 .wall{
     grid-area: img;
 }
 
+/**
+    The true center is looks "off".
+    Center the text so that it is skewed to the left.
+    Do this by using a negative margin.
+**/
 .fakecen{
     width: 50%;
     margin-left: -30%;
 }
+
 .list{
     column-count: 2;
     column-gap: 20px;
@@ -141,6 +164,7 @@ body{
 #article3{
     grid-area: blog3
 }
+
 #bio{
     grid-area: bio;
     display: grid;
@@ -155,6 +179,7 @@ body{
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 52%, rgba(229,252,249,1) 100%); 
 }
+
 .bio-heading{
     font-size:  240%;
     align-self: center;
@@ -172,9 +197,14 @@ body{
     width: 90%;
     text-align: left;
 }
+/**
+    Make the images grayscale until you hover over them.
+    Elon does like his blue and red though...
+**/
 .histlist{
     height: 50px;
     filter: grayscale(100%);
+    flex-basis: 50%;
 }
 
 .histlist:hover{
@@ -187,11 +217,15 @@ body{
 
 .comp-name{
     display: inline;
+    flex-basis: 50%;
 }
 
 .comp-listing{
+    display: flex;
     text-align: left;
+    flex-wrap: wrap;
 }
+
 footer{
     background-color:  #2e6c9b;
     text-align:center;
