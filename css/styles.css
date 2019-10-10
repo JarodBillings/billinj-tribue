@@ -17,6 +17,7 @@ main {
 
 header{
     grid-area: head;
+    
 }
 
 .heading{
@@ -197,6 +198,10 @@ Gradient for the middle section
     width: 90%;
     text-align: left;
 }
+
+.histlink{
+    flex-basis:50%;
+}
 /**
     Make the images grayscale until you hover over them.
     Elon does like his blue and red though...
@@ -204,7 +209,8 @@ Gradient for the middle section
 .histlist{
     height: 50px;
     filter: grayscale(100%);
-    flex-basis: 50%;
+    flex-grow:2;
+    margin-left:30%;
 }
 
 .histlist:hover{
@@ -218,12 +224,12 @@ Gradient for the middle section
 .comp-name{
     display: inline;
     flex-basis: 50%;
+    text-align: center;
 }
 
 .comp-listing{
     display: flex;
-    text-align: left;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
 }
 
 footer{
@@ -235,22 +241,26 @@ footer{
 
 
 @media screen and (max-width: 768px) {
-    main { grid-template-columns: 1fr;
+    main {
            grid-template-areas:
-           "head"
-           "head"
+           "head head head"
            "one"
            "two"
            "three"
-           "img blog1 blog1"
-           "img blog2 blog2"
-           "img blog3 blog3"
+           "blog1 blog1"
+           "blog2 blog2"
+           "blog3 blog3"
            "bio bio bio";
    
     }
     .wall {display: none;}
     .splash {display: none;}
-    header {grid-template-columns: 1fr;}
+    header {
+        grid-area: head;
+        width:100%;
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 30%, rgba(246,247,212,1) 100%);
+    }
+
     .heading{
         background: rgb(255,255,255);
         background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 30%, rgba(246,247,212,1) 100%); 
@@ -259,6 +269,8 @@ footer{
     .fakecen{
         width: 125%;
         margin-left: -44%;
+        margin-top:2%;
+        margin-bottom:2%;
     }
     .bio-img{
         display: none;
